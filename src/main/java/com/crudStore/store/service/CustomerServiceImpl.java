@@ -10,7 +10,6 @@ import java.util.List;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
-    private CustomerDao customerDao;
 
 
 
@@ -18,4 +17,5 @@ public class CustomerServiceImpl implements CustomerService {
     public List<Customer> loadAllCustomer() {
         return null;
     }
+
 }
