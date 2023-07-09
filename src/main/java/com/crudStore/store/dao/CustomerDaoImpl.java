@@ -2,16 +2,18 @@ package com.crudStore.store.dao;
 
 import com.crudStore.store.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
+
 public class CustomerDaoImpl implements CustomerDao {
 
     private EntityManager entityManager;
 
-    @Autowired
+   @Autowired
     public CustomerDaoImpl(EntityManager theEntityManager){
         entityManager = theEntityManager;
     }
