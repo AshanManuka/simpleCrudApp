@@ -1,6 +1,6 @@
 package com.crudStore.store.controller;
 
-import com.crudStore.store.dao.CustomerDao;
+
 import com.crudStore.store.entity.Customer;
 import com.crudStore.store.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +14,12 @@ import java.util.List;
 @RequestMapping(value = "/customer")
 public class CustomerController {
 
-    @Autowired
     private CustomerService customerService;
+
+    @Autowired
+    public CustomerController(CustomerService cusService){
+        customerService = cusService;
+    }
 
     @GetMapping
     public List<Customer> loadAllCustomer(){
