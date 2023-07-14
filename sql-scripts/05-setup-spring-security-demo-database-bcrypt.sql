@@ -1,4 +1,4 @@
-USE `employee_directory`;
+USE `storedb`;
 
 DROP TABLE IF EXISTS `authorities`;
 DROP TABLE IF EXISTS `users`;
