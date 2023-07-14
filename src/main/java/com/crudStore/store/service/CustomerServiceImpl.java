@@ -25,4 +25,12 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepo.findAll();
     }
 
+    @Override
+    public String saveCustomer(Customer customer) {
+        System.out.println(customer+"taken by service layer");
+        Customer saved = customerRepo.save(customer);
+        System.out.println(saved+"sent from repo");
+        return "customer saved!!";
+    }
+
 }
